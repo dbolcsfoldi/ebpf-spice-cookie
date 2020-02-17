@@ -17,8 +17,7 @@ const std::string BPF_PROG = R"(
 
     int prog_parser(struct __sk_buff *skb)
     {
-      bpf_trace_printk("parser\n");
-	    return skb->len;
+      return skb->len;
     }
 
     int prog_verdict(struct __sk_buff *skb) {
